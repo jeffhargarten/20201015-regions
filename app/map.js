@@ -24,10 +24,10 @@ class StribCountyMap {
     .range(['#e7e7e7', '#D9D3EB', '#B6AED4', '#7D739C', '#62597D', '#4A4061']);
     this.colorScale2 = d3.scaleLinear()
     .domain([-10, -5, 0, 5, 10])
-    .range(['#8F4B31', '#DEA381', '#F2E0C7', '#D6E6CC', '#8CBF82', '#3C8259']);
+    .range(['#822010', '#e07242', '#f2d2a4', '#c7e5b5', '#5bbf48', '#118241']);
     this.colorScale3 = d3.scaleLinear()
     .domain([-0.30, -0.15, -0.01, 0, 0.01, 0.15, 0.30])
-    .range(['#556E7F', '#7F98AA', '#A8B9C5', '#f4f4f4', '#DF8F86', '#C2655F', '#9E403C']);
+    .range(['#0d4673', '#67b4c2', '#A8B9C5', '#f4f4f4', '#DF8F86', '#f2614c', '#9c0004']);
   }
   
   _renderState() {
