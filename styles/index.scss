@@ -1,0 +1,293 @@
+/**
+ * Main style file for project.
+ * Uses SASS, specifically the SCSS syntax
+ * http://sass-lang.com/
+ */
+
+
+
+// Include strib-icons
+$strib-fonts-location: '//static.startribune.com/assets/libs/strib-icons/0.0.10/';
+@import '@striblab/strib-icons/build/strib-icons.scss';
+
+
+// Strib styles
+// https://github.com/striblab/strib-styles/blob/master/source/styles/_variables.scss
+
+// Assumed that this project lives within an existing page, so we add a
+// wrapper that is very specific and wrap our other styles in it so
+// that we don't affect other styles on the page.  Note that
+// this increases the CSS size, and it means strib-styles won't use
+// rems when it would otherwise.
+$selector-wrapper: '.strib-styles.ssa.ssb.ssc';
+@import '@striblab/strib-styles/source/styles/default-wrapper.scss';
+
+// Project specific styles.  Split styles into files per component
+#{$selector-wrapper} {
+  // Split your styles into multiple files so its easier to understand and change
+  @import 'project';
+}
+
+.elexLogo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 35px  !important;
+  margin-top: 50px  !important;
+}
+
+.elexLogo img {
+  width: 50px;
+}
+
+.elexLogo .text {
+  font-family: "Benton Sans", sans-serif !important;
+  margin-right: 5px;
+}
+
+.elexLogo h3 {
+  font-family: "Popular", sans-serif !important;
+  margin-bottom: 0 !important;
+  margin-top: 10px !important;
+  font-size: 15px !important;
+  font-weight: bold !important;
+}
+
+.article-dateline {
+  font-size:14px !important;
+}
+
+.slide {
+  width: 520px !important;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:40px;
+  margin-bottom:40px;
+
+  .bottom {
+    margin-bottom:0px;
+  }
+}
+
+.map {
+  text-align:center;
+  width:300px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.center {
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+
+.explain {
+  margin-bottom:15px;
+}
+
+.bar {
+  height:50px;
+  margin-bottom:10px;
+  font-size:1.1em;
+}
+
+.bar div {
+  display:inline-block;
+  height:50px;
+  color:#ffffff;
+  font-size:0.9em;
+  font-weight:bold;
+  text-align:right;
+  padding-right:2px;
+}
+
+.legend {
+  font-size:0.6em;
+  margin-bottom:15px;
+}
+
+#mainlegend {
+  margin-top:25px;
+  margin-bottom:15px;
+  font-size:0.8em;
+}
+
+.legend div {
+  height:10px;
+  width:40px;
+  display:inline-block;
+}
+
+.null {
+  background-color:#f7f7f7;
+}
+
+.purple_alt {
+  color: #8b62a8;
+}
+
+.purple {
+  color: #7D739C;
+}
+
+.center {
+  margin-top:15px;
+  margin-bottom:15px;
+}
+
+.legend {
+  font-size:0.6em;
+}
+
+.legend div {
+  height:10px;
+  width:16.62%;
+  text-align:center;
+  font-size:1em;
+  display:inline-block;
+}
+
+.white {
+  background-color:#ffffff;
+}
+
+.null {
+  fill: #F7F7F7;
+  background-color: #F7F7F7;
+}
+
+.purple1 {
+  fill: #D9D3EB;
+  background-color: #D9D3EB;
+}
+
+.purple2 {
+  fill: #B6AED4;
+  background-color: #B6AED4;
+}
+    
+.purple3 {
+  fill: #7D739C;
+  background-color: #7D739C;
+}
+    
+.purple4 {
+  fill: #62597D;
+  background-color: #62597D;
+}
+    
+.purple5 {
+  fill: #4A4061;
+  background-color: #4A4061;
+}
+
+.red1 {
+  fill: #DF8F86;
+  background-color: #DF8F86;
+}
+
+.red3 {
+  fill: #C2655F;
+  background-color: #C2655F;
+}
+
+.red5 {
+  fill: #9E403C;
+  background-color: #9E403C;
+}
+  
+.blue1 {
+  fill: #A8B9C5;
+  background-color: #A8B9C5;
+}
+
+.blue3 {
+  fill: #7F98AA;
+  background-color: #7F98AA;
+}
+
+.blue4 {
+  fill: #556E7F;
+  background-color: #556E7F;
+}
+
+.blue5 {
+  fill: #2C3942;
+  background-color: #2C3942;
+}
+
+.gop {
+  border-bottom: 3px solid #C2655F;
+}
+
+.dfl {
+  border-bottom: 3px solid #556E7F;
+}
+
+.orange1 {
+  fill: #F2E0C7;
+  background-color: #F2E0C7;
+}
+    
+.orange2 {
+  fill: #F2C9AC;
+  background-color: #F2C9AC;
+}
+    
+.orange3 {
+  fill: #DEA381;
+  background-color: #DEA381;
+}
+    
+.orange4 {
+  fill: #C28059;
+  background-color: #C28059;
+}
+  
+.orange5 {
+  fill: #8F4B31;
+  background-color: #8F4B31;
+}
+
+.green1 {
+  fill: #D6E6CC;
+  background-color: #D6E6CC;
+}
+    
+.green2 {
+  fill: #B6E3A6;
+  background-color: #B6E3A6;
+}
+    
+.green3 {
+  fill: #8CBF82;
+  background-color: #8CBF82;
+}
+
+.green4 {
+  fill: #5A9E65;
+  background-color: #5A9E65;
+}
+  
+.green5 {
+  fill: #3C8259;
+  background-color: #3C8259;
+}
+
+
+#splitLegend, #changeLegend, #splitLegend {
+  display:none;
+}
+
+
+.highlighted {
+  stroke-width: 0.5px !important;
+  stroke: #ffffff !important;
+}
+
+
+
+@media (max-width:1000px) {
+
+}

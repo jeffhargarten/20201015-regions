@@ -1,0 +1,55 @@
+{
+  "about this file": "This document defines configuration for this project that is not content or copy.",
+
+  "projectIdentifier": "20201015-regions",
+
+  "data": {
+    "content": "./content.json",
+    "pkg": "./package.json"
+  },
+
+  "cms": {
+    "id": "572649841",
+    "pages": ["572649841"],
+    "lcds": [""],
+    "rewriteMapping": {
+      "article-lcd-body-content": "_index-content.html"
+    }
+  },
+
+
+  "styles": {
+    "globals": [
+    ]
+  },
+  "js": {
+    "globals": [
+      "https://cdn.polyfill.io/v2/polyfill.min.js",
+      "https://static.startribune.com/assets/libs/pym.js/1.3.2/pym.v1.min.js",
+      "https://static.startribune.com/assets/libs/lodash/4.17.4/lodash.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js",
+      "https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"
+    ]
+  },
+  "publishToken": "eec706f89bf149b053fc142867c3b920",
+  "publish": {
+    "default": {
+      "bucket": "static.startribune.com",
+      "path": "news/projects-staging/all/20201015-regions",
+      "url": "http://static.startribune.com/news/projects-staging/all/20201015-regions/",
+      "cacheSeconds": 30
+    },
+    "testing": {
+      "bucket": "stribtest-bucket",
+      "path": "news/projects/20201015-regions",
+      "url": "https://s3.amazonaws.com/stribtest-bucket/news/projects/20201015-regions/",
+      "cacheSeconds": 30
+    },
+    "production": {
+      "bucket": "static.startribune.com",
+      "path": "news/projects/all/20201015-regions",
+      "url": "http://static.startribune.com/news/projects/all/20201015-regions/",
+      "cacheSeconds": 600
+    }
+  }
+}
