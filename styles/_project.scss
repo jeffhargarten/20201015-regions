@@ -152,11 +152,17 @@
 
    @media only screen and (max-width: 600px) {
     height: 588px !important;
+    margin-bottom: 700px;
 
     &:first-child {
       border-top:0;
       height: 700px !important;
-      margin-bottom: 400px;
+      margin-bottom: 700px;
+    }
+    &:last-child {
+      border-top:0;
+      height: 700px !important;
+      margin-bottom: 1500px;
     }
    }
  

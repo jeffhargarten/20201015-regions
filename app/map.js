@@ -94,7 +94,7 @@ class StribCountyMap {
   _startCounter(num, target) {
         $(target).each(function () {
             var $this = $(this);
-            jQuery({ Counter: 0 }).animate({ Counter: num }, {
+            jQuery({ Counter: Number($(target).text) }).animate({ Counter: num }, {
                 duration: 1000,
                 easing: 'swing',
                 step: function () {
@@ -125,6 +125,7 @@ class StribCountyMap {
         }
       });
       self._startCounter(12, "#counterNum");
+      $("#counterNum").css('background-color', self.colorScale(0.12));
       $("#year").html(2014);
       $("#kind").html("general");
     }
@@ -139,7 +140,7 @@ class StribCountyMap {
         }
       });
       self._startCounter(23, "#counterNum");
-      $("#counterNum").css('background-color', self.colorScale(0.23));
+      $("#counterNum").css('background-color', self.colorScale(0.30));
       $("#year").html(2016);
       $("#kind").html("general");
     }
@@ -155,7 +156,7 @@ class StribCountyMap {
       });
       d3.selectAll(".northwest").classed("highlighted", true);
       self._startCounter(24, "#counterNum");
-      $("#counterNum").css('background-color', self.colorScale(0.24));
+      $("#counterNum").css('background-color', self.colorScale(0.30));
       $("#year").html(2018);
       $("#kind").html("general");
       $(".map-city-label-large").show();
@@ -209,7 +210,7 @@ class StribCountyMap {
 
   }
 
-  render(cities=[1, 2, 3, 4]) {
+  render() {
     var self = this;
     $("#counterNum").css('background-color', self.colorScale(0.23));
     self._renderState();

@@ -288,6 +288,8 @@ $selector-wrapper: '.strib-styles.ssa.ssb.ssc';
 
 
 
-@media (max-width:1000px) {
-
+@media (max-width:600px) {
+  .explain {
+    height:50px;
+  }
 }
