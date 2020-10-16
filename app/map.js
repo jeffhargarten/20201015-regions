@@ -203,7 +203,7 @@ class StribCountyMap {
           }
         }
       });
-      self._startCounter(64, "#partisanCount");
+      self._startCounter(62, "#partisanCount");
       $("#mainLegend").hide();
       $("#splitLegend").show();
     }
