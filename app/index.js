@@ -56,3 +56,19 @@ import ScrollyGraphic from "../app/scroller.js";
 // Setup utils function
 utilsFn({ });
 
+// var aspect = 500 / 550,
+// chart = document.getElementById("precinct-map");
+// var targetWidth = chart.parent().width();
+// chart.setAttribute("width", targetWidth);
+// chart.setAttribute("height", targetWidth / aspect);
+// chart.setAttribute("viewBox", "0 -20 1000 1000");
+
+// if ($(window).width() <= 520) {
+//     chart.setAttribute("viewBox", "0 -20 500 550");
+// }
+
+// $(window).on("resize", function() {
+// targetWidth = chart.parent().width();
+// chart.attr("width", targetWidth);
+// chart.attr("height", targetWidth / aspect);
+// });

@@ -2,6 +2,7 @@ import {select, selectAll, event} from 'd3-selection';
 import {geoPath} from 'd3-geo';
 import * as d3 from 'd3';
 import {format} from 'd3-format';
+import { feature } from 'topojson';
 import * as topojson from "topojson";
 import {annotation, annotationLabel,annotationCalloutCircle} from "d3-svg-annotation";
 import map from '../sources/counties.json';
@@ -14,8 +15,13 @@ class StribCountyMap {
     this.target = target;
     this.width  = $(this.target).outerWidth();
     this.height = $(this.target).outerHeight();
-    this.svg = d3.select(this.target).attr("width", this.width).attr("height", this.height);
-    this.projection = d3.geoAlbers().scale(5037).translate([150, 1100]);
+    this.svg = d3.select(this.target).attr("width", this.width-50).attr("height", this.height);
+    // this.projection = d3.geoAlbers().scale(5037).translate([150, 1100]);
+    this.land = feature(map, map.objects.counties).features;
+    this.projection = d3.geoConicConformal()
+    .parallels([45 + 37 / 60, 47 + 3 / 60])
+    .rotate([94 + 15 / 60, 0])
+    .fitSize([this.width, this.height], {type: "FeatureCollection", features: this.land});
     this.path = d3.geoPath(this.projection);
     this.data = ab.ab;
     this.m = map;
@@ -44,7 +50,6 @@ class StribCountyMap {
   
   _renderCounties() {
     var self = this;
-
 
     self.svg.append("g")
       .selectAll("path")
