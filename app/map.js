@@ -23,8 +23,8 @@ class StribCountyMap {
     .domain([0, 0.10, 0.30, 0.50, 0.70, .90])
     .range(['#e7e7e7', '#D9D3EB', '#B6AED4', '#7D739C', '#62597D', '#4A4061']);
     this.colorScale2 = d3.scaleLinear()
-    .domain([-10, -5, 0, 5, 10])
-    .range(['#822010', '#e07242', '#f2d2a4', '#c7e5b5', '#5bbf48', '#118241']);
+    .domain([0.75, 2.5, 5, 10, 15, 20])
+    .range(['#c7e5b5', '#9ee384', '#5bbf48', '#299e3d', '#118241', '#004C21']);
     this.colorScale3 = d3.scaleLinear()
     .domain([-0.30, -0.15, -0.01, 0, 0.01, 0.15, 0.30])
     .range(['#0d4673', '#67b4c2', '#A8B9C5', '#f4f4f4', '#DF8F86', '#f2614c', '#9c0004']);
@@ -187,7 +187,7 @@ class StribCountyMap {
           }
         }
       });
-      self._startCounter(600, "#bigcount");
+      self._startCounter(500, "#bigcount");
       $("#year").html(2020);
       $("#kind").html("general");
       $("#mainLegend").hide();
