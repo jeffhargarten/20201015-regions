@@ -103,7 +103,7 @@ class StribCountyMap {
                 duration: 1000,
                 easing: 'swing',
                 step: function () {
-                    $this.text(Math.ceil(this.Counter));
+                    $this.text(Math.ceil(this.Counter) + '%');
                 }
             });
         });
