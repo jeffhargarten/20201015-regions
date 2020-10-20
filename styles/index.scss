@@ -300,6 +300,11 @@ $selector-wrapper: '.strib-styles.ssa.ssb.ssc';
 }
 
 
+.content-scroll {
+  max-width: 100% !important;
+  margin: auto;
+}
+
 
 @media (max-width:600px) {
   .explain {
